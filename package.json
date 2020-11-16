@@ -1,0 +1,21 @@
+{
+  "name": "jsonrandom",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "faker": "^5.1.0",
+    "helmet": "^4.2.0",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.10.11",
+    "morgan": "~1.9.1"
+  }
+}
