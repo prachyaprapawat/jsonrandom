@@ -598,8 +598,37 @@ const randomtype = async (e) => {
         let randomValue = e.random[Math.floor(Math.random() * e.random.length)];
         randomJson[e.name] = randomValue
     }
-    else if (e.type === "th_myaddress") {
-        console.log(thAddress.address.length)
+    else if (thAddress.codeAddress.includes(e.type)) {
+        let randomValue = thAddress.address[Math.floor(Math.random() * 7493)];
+        console.log(randomValue)
+        switch (e.type) {
+            case "th_myaddress_district":
+                randomJson[e.name] = randomValue.district
+                break;
+            case "th_myaddress_amphoe":
+                randomJson[e.name] = randomValue.amphoe
+                break;
+            case "th_myaddress_province":
+                randomJson[e.name] = randomValue.province
+                break;
+            case "th_myaddress_zipcode":
+                randomJson[e.name] = randomValue.zipcode
+                break;
+            case "th_myaddress_district_code":
+                randomJson[e.name] = randomValue.district_code
+                break;
+            case "th_myaddress_province_code":
+                randomJson[e.name] = randomValue.amphoe_code
+                break;
+            case "th_myaddress_amphoe_code":
+                randomJson[e.name] = randomValue.province_code
+                break;
+            case "th_myaddress_address":
+                randomJson[e.name] = `จ.${randomValue.province} อ.${randomValue.amphoe} ต.${randomValue.district} 
+                รหัสไปรษณีย์:${randomValue.zipcode} บ้านเลขที่:${Math.floor(Math.random() * 999)}/${Math.floor(Math.random() * 99)} 
+                หมู่.${Math.floor(Math.random() * 10)+1}`
+                break;
+        }
     }
 
     else {
