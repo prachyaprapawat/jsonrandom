@@ -67443,13 +67443,12 @@ module.exports.address = address
 
 
 module.exports.codeAddress = [
-    "th_myaddress_district",
-    "th_myaddress_amphoe",
-    "th_myaddress_province",
-    "th_myaddress_zipcode",
-    "th_myaddress_district_code",
-    "th_myaddress_province_code",
-    "th_myaddress_amphoe_code",
-    "th_myaddress_address"
+    "district",
+    "amphoe",
+    "province",
+    "zipcode",
+    "district_code",
+    "province_code",
+    "amphoe_code"
 ]
 
